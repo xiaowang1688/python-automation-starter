@@ -1,0 +1,5 @@
+order_id,currency,amount
+ORD-1001,USD,125.00
+ORD-1002,USD,49.99
+ORD-1003,USD,10.00
+ORD-1004,USD,75.00
