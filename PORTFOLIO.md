@@ -7,7 +7,7 @@ Based in Mainland China (UTC+8) · Interested in international remote Python aut
 [![Python Automation CI](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 [![Security Scanner CI](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml)
 
-**[English Technical Resume / 英文技术简历](RESUME.md)** · [Live CI evidence](https://github.com/xiaowang1688/python-automation-starter/actions)
+**[LinkedIn](https://www.linkedin.com/in/%E6%B6%9B-%E5%BC%A0-30116924a/)** · **[English Technical Resume / 英文技术简历](RESUME.md)** · [Live CI evidence](https://github.com/xiaowang1688/python-automation-starter/actions)
 
 ## About me / 关于我
 
@@ -87,6 +87,6 @@ I am interested in international teams that value testable Python scripts, repro
 - **Role interests:** Python Automation Engineer · QA Automation / Test Development · API Testing · Scripting
 - **Location:** Mainland China · Remote-first opportunities
 - **Communication:** Chinese-first; translation-assisted English writing and asynchronous documentation
-- **Contact:** Open a GitHub discussion or issue in a relevant public repository, or use GitHub's profile contact options once configured
+- **Contact:** [LinkedIn profile](https://www.linkedin.com/in/%E6%B6%9B-%E5%BC%A0-30116924a/) · Public GitHub issues for non-sensitive technical discussion only
 
 > These repositories demonstrate **hands-on project implementations and CI evidence**, not an unverified number of years in a production role, employer names, or client outcomes.
