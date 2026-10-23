@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "name": "fetch-todo",
+      "url": "https://jsonplaceholder.typicode.com/todos/1",
+      "expected_status": 200,
+      "json_contains": {
+        "userId": 1,
+        "id": 1
+      },
+      "timeout_seconds": 6
+    },
+    {
+      "name": "no-content",
+      "url": "https://httpbin.org/status/204",
+      "expected_status": 204,
+      "timeout_seconds": 6
+    }
+  ]
+}
