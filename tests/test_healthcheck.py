@@ -73,6 +73,21 @@ class HealthCheckTests(unittest.TestCase):
         self.assertFalse(result.ok)
         self.assertEqual(result.status, 503)
 
+    def test_token_is_not_sent_without_explicit_opt_in(self):
+        captured = []
+
+        def opener(request, timeout):
+            captured.append(request)
+            return FakeResponse(200)
+
+        result = check_endpoint(
+            Endpoint("public", "https://example.com", retries=0),
+            token="sample-token",
+            opener=opener,
+        )
+        self.assertTrue(result.ok)
+        self.assertIsNone(captured[0].get_header("Authorization"))
+
     def test_token_only_in_https_request_header(self):
         requests = []
 
@@ -80,13 +95,13 @@ class HealthCheckTests(unittest.TestCase):
             requests.append(request)
             return FakeResponse(200)
 
-        result = check_endpoint(Endpoint("private", "https://example.com", retries=0),
+        result = check_endpoint(Endpoint("private", "https://example.com", retries=0, auth="bearer"),
                                 token="sample-token", opener=opener)
         self.assertTrue(result.ok)
         self.assertEqual(requests[0].get_header("Authorization"), "Bearer sample-token")
         self.assertNotIn("sample-token", repr(result))
         with self.assertRaises(ConfigError):
-            check_endpoint(Endpoint("insecure", "http://example.com"), token="sample-token")
+            check_endpoint(Endpoint("insecure", "http://example.com", auth="bearer"), token="sample-token")
 
 
 if __name__ == "__main__":
