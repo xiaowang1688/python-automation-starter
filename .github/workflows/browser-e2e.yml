@@ -2,7 +2,21 @@ name: Playwright Browser E2E
 
 on:
   push:
+    paths:
+      - "browser_tests/**"
+      - "examples/demo_order_portal.html"
+      - "requirements-browser.txt"
+      - ".github/workflows/browser-e2e.yml"
   pull_request:
+    paths:
+      - "browser_tests/**"
+      - "examples/demo_order_portal.html"
+      - "requirements-browser.txt"
+      - ".github/workflows/browser-e2e.yml"
+
+concurrency:
+  group: browser-e2e-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
