@@ -12,7 +12,7 @@ import time
 from typing import Callable
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
-from urllib.request import Request, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener, urlopen
 
 
 class ConfigError(ValueError):
@@ -26,6 +26,7 @@ class Endpoint:
     expected_status: int = 200
     timeout_seconds: float = 5.0
     retries: int = 1
+    auth: str = "none"
 
 
 @dataclass(frozen=True)
@@ -54,13 +55,16 @@ def parse_endpoint(raw: object) -> Endpoint:
     status = raw.get("expected_status", 200)
     timeout = raw.get("timeout_seconds", 5)
     retries = raw.get("retries", 1)
+    auth = raw.get("auth", "none")
     if type(status) is not int or not 100 <= status <= 599:
         raise ConfigError(f"{name}: expected_status must be 100..599")
     if type(timeout) not in (int, float) or not 0.1 <= timeout <= 60:
         raise ConfigError(f"{name}: timeout_seconds must be 0.1..60")
     if type(retries) is not int or not 0 <= retries <= 5:
         raise ConfigError(f"{name}: retries must be 0..5")
-    return Endpoint(name.strip(), url, status, float(timeout), retries)
+    if auth not in ("none", "bearer"):
+        raise ConfigError(f"{name}: auth must be none or bearer")
+    return Endpoint(name.strip(), url, status, float(timeout), retries, auth)
 
 
 def load_config(path: str | Path) -> list[Endpoint]:
@@ -78,23 +82,36 @@ def load_config(path: str | Path) -> list[Endpoint]:
     return endpoints
 
 
+class NoRedirectHandler(HTTPRedirectHandler):
+    """Prevent forwarding bearer credentials to a redirected origin."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
 def check_endpoint(
     endpoint: Endpoint,
     token: str | None = None,
-    opener: Callable = urlopen,
+    opener: Callable | None = None,
     sleeper: Callable = time.sleep,
 ) -> CheckResult:
-    if token and urlsplit(endpoint.url).scheme != "https":
+    if endpoint.auth == "bearer" and not token:
+        raise ConfigError(f"{endpoint.name}: AUTOMATION_API_TOKEN is required")
+    if endpoint.auth == "bearer" and urlsplit(endpoint.url).scheme != "https":
         raise ConfigError(f"{endpoint.name}: bearer token requires HTTPS")
     headers = {"User-Agent": "python-automation-starter/1.0"}
-    if token:
+    if endpoint.auth == "bearer":
         headers["Authorization"] = f"Bearer {token}"
+    # urllib can forward request headers on redirects; disallow them for authenticated calls.
+    request_opener = opener or (
+        build_opener(NoRedirectHandler()).open if endpoint.auth == "bearer" else urlopen
+    )
     status = None
     error = None
     for attempt in range(1, endpoint.retries + 2):
         request = Request(endpoint.url, headers=headers, method="GET")
         try:
-            with opener(request, timeout=endpoint.timeout_seconds) as response:
+            with request_opener(request, timeout=endpoint.timeout_seconds) as response:
                 status = response.getcode()
             if status == endpoint.expected_status:
                 return CheckResult(endpoint.name, True, status, attempt, None)
