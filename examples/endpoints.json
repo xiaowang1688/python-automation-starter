@@ -1,0 +1,11 @@
+{
+  "endpoints": [
+    {
+      "name": "example-homepage",
+      "url": "https://example.com/",
+      "expected_status": 200,
+      "timeout_seconds": 5,
+      "retries": 1
+    }
+  ]
+}
