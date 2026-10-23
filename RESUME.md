@@ -2,6 +2,8 @@
 
 **Based in Mainland China (UTC+8) | Open to international remote employment or contract work**
 
+**Professional links:** [LinkedIn](https://www.linkedin.com/in/%E6%B6%9B-%E5%BC%A0-30116924a/) · [GitHub](https://github.com/xiaowang1688) · [Engineering portfolio](PORTFOLIO.md)
+
 ## Professional summary
 
 Python automation developer focused on reproducible, test-driven workflows for API checks, browser QA, structured logs, business-data validation and command-line operations. Current public work demonstrates executable Python implementations, failure handling, deterministic tests, GitHub Actions and written handover documentation.
@@ -57,7 +59,7 @@ Python 3, unittest, API/HTTP testing, JSON, CSV, Decimal, file processing, Playw
 
 View [published GitHub profile](https://github.com/xiaowang1688), [complete portfolio](PORTFOLIO.md) and [CI runs](https://github.com/xiaowang1688/python-automation-starter/actions). Projects include runnable instructions, examples, implementation code and passing automated tests. A potential employer can review these directly.
 
-Open a GitHub repository issue for an initial **non-sensitive** technical inquiry; do not post contracts, access keys, or contact details publicly. Establish a private communication channel before sharing confidential information.
+Connect through [LinkedIn](https://www.linkedin.com/in/%E6%B6%9B-%E5%BC%A0-30116924a/) or open a GitHub repository issue for an initial **non-sensitive** technical inquiry; do not post contracts, access keys, or contact details publicly. Establish a private communication channel before sharing confidential information.
 
 ---
 
