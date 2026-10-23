@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo Operations Portal — UI Test Fixture</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#f4f7fb; margin:0; padding:40px 16px; color:#15253e; }
+    main { max-width:560px; margin:auto; background:white; border:1px solid #dae2ed; border-radius:18px; padding:30px; box-shadow:0 8px 30px #142c4a0c; }
+    h1 { margin:0 0 10px; } .muted { color:#58677a; } label { display:block; font-weight:600; margin:20px 0 6px; }
+    input,select,button { box-sizing:border-box; width:100%; padding:13px; border:1px solid #9ba9bd; border-radius:9px; font:inherit; }
+    button { margin-top:24px; color:white; background:#205db8; font-weight:700; border:0; cursor:pointer; }
+    #result { margin-top:20px; padding:12px; border-radius:8px; background:#eef3fa; min-height:22px; }
+    #result[data-state="error"] { background:#ffe8e8; color:#972828; }
+    #result[data-state="success"] { background:#e6f5ed; color:#216b40; }
+    small { color:#58677a; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Demo Operations Portal</h1>
+    <p class="muted">A self-contained sample interface for automated browser regression tests.</p>
+    <form id="order-form" novalidate>
+      <label for="order-id">Order ID</label>
+      <input id="order-id" name="order-id" placeholder="ORD-1001" autocomplete="off">
+      <small>Use ORD- followed by four digits.</small>
+      <label for="quantity">Quantity</label>
+      <input id="quantity" name="quantity" type="number" min="1" max="100" value="1">
+      <label for="shipping">Shipping method</label>
+      <select id="shipping" name="shipping">
+        <option value="Standard">Standard</option>
+        <option value="Express">Express</option>
+      </select>
+      <button id="submit-order" type="submit">Queue order</button>
+    </form>
+    <div id="result" role="status" aria-live="polite" data-state="idle">Ready.</div>
+  </main>
+  <script>
+    document.querySelector("#order-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const id = document.querySelector("#order-id").value.trim();
+      const quantity = Number(document.querySelector("#quantity").value);
+      const shipping = document.querySelector("#shipping").value;
+      const output = document.querySelector("#result");
+      if (!/^ORD-\d{4}$/.test(id)) {
+        output.dataset.state = "error";
+        output.textContent = "Invalid order ID. Use ORD- plus four digits.";
+        return;
+      }
+      if (!Number.isInteger(quantity) || quantity < 1 || quantity > 100) {
+        output.dataset.state = "error";
+        output.textContent = "Quantity must be between 1 and 100.";
+        return;
+      }
+      output.dataset.state = "success";
+      output.textContent = "Order " + id + " queued: " + quantity + " item(s) via " + shipping + ".";
+    });
+  </script>
+</body>
+</html>
