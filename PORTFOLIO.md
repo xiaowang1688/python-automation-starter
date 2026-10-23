@@ -67,7 +67,7 @@ I am interested in international teams that value testable Python scripts, repro
 
 工作方式：异步文字沟通、GitHub Issues/PR、可复现的问题描述、自动化测试结果、英文优先文档。没有公开验证的雇主、工作年限、生产客户或商业交付记录，不会在此虚构。
 
-[Remote collaboration notes](docs/INTERNATIONAL_REMOTE.md) · [GitHub profile README draft](PROFILE_README_DRAFT.md)
+[Remote collaboration notes](docs/INTERNATIONAL_REMOTE.md) · [Live GitHub profile README](https://github.com/xiaowang1688/xiaowang1688#readme)
 
 ## What you can verify / 可核验的技能
 

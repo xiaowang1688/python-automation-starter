@@ -6,6 +6,8 @@
 
 **Maintained by [Xiaowang](https://github.com/xiaowang1688) · Python Automation / QA Automation · Open to international remote opportunities**
 
+[Live GitHub Profile README](https://github.com/xiaowang1688/xiaowang1688#readme) · [Full GitHub profile](https://github.com/xiaowang1688)
+
 **For hiring reviewers:** [English technical resume](RESUME.md) · [About me and selected projects](PORTFOLIO.md) · [Engineering case study](docs/ENGINEERING_CASE_STUDY.md) · [Actual source](automation/healthcheck.py) · [Offline tests](tests/test_healthcheck.py) · [CI evidence](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 
 **中文**：本项目展示 Python 自动化开发的可运行实践：批量 HTTP 接口检查、JSON 配置、超时与有限次重试、状态码验证、结构化结果、单元测试和 GitHub Actions CI。可从上面的代码与测试链接核验实现，不宣称未验证的线上业务成果。

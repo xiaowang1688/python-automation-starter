@@ -55,7 +55,7 @@ Python 3, unittest, API/HTTP testing, JSON, CSV, Decimal, file processing, Playw
 
 ## Validation and communication
 
-View [complete portfolio](PORTFOLIO.md) and [CI runs](https://github.com/xiaowang1688/python-automation-starter/actions). Projects include runnable instructions, examples, implementation code and passing automated tests. A potential employer can review these directly.
+View [published GitHub profile](https://github.com/xiaowang1688), [complete portfolio](PORTFOLIO.md) and [CI runs](https://github.com/xiaowang1688/python-automation-starter/actions). Projects include runnable instructions, examples, implementation code and passing automated tests. A potential employer can review these directly.
 
 Open a GitHub repository issue for an initial **non-sensitive** technical inquiry; do not post contracts, access keys, or contact details publicly. Establish a private communication channel before sharing confidential information.
 

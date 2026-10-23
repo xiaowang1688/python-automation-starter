@@ -1,5 +1,7 @@
 # Remote Collaboration & Work Samples
 
+[Public professional profile](https://github.com/xiaowang1688) · [Engineering portfolio](../PORTFOLIO.md)
+
 ## Target roles
 - Python Automation Engineer: script-driven business processes, API checks, scheduled jobs
 - QA Automation / API Test Engineer: reproducible test scenarios, assertion-based checks, CI reports
