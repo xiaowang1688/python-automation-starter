@@ -23,4 +23,4 @@ All featured Python automation work can be reviewed through code, unit tests, an
 
 **Preferred roles:** Python Automation Engineer · QA Automation Engineer · API Test Engineer · Python Scripting Contractor
 
-[Detailed portfolio / 技术作品集](https://github.com/xiaowang1688/python-automation-starter/blob/main/PORTFOLIO.md) · [Case-study index](https://github.com/xiaowang1688/python-automation-starter#additional-hands-on-automation-projects)
+[English technical resume](https://github.com/xiaowang1688/python-automation-starter/blob/main/RESUME.md) · [Detailed portfolio / 技术作品集](https://github.com/xiaowang1688/python-automation-starter/blob/main/PORTFOLIO.md) · [Case-study index](https://github.com/xiaowang1688/python-automation-starter#additional-hands-on-automation-projects)

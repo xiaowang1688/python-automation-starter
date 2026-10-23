@@ -7,6 +7,8 @@ Based in Mainland China (UTC+8) · Interested in international remote Python aut
 [![Python Automation CI](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 [![Security Scanner CI](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml)
 
+**[English Technical Resume / 英文技术简历](RESUME.md)** · [Live CI evidence](https://github.com/xiaowang1688/python-automation-starter/actions)
+
 ## About me / 关于我
 
 I focus on **practical Python automation**: repeatable API checks, testable scripts, CI workflows, and small security tools. My GitHub projects include real source code, runnable instructions, offline regression tests, and GitHub Actions results—so reviewers can verify the implementation rather than relying on skill claims alone.
