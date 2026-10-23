@@ -1,0 +1,7 @@
+{"timestamp":"2026-01-01T10:15:00Z","service":"checkout-api","status":200,"latency_ms":120}
+{"timestamp":"2026-01-01T10:15:04Z","service":"checkout-api","status":503,"latency_ms":950}
+{"timestamp":"2026-01-01T10:15:07Z","service":"checkout-api","status":502,"latency_ms":1500}
+{"timestamp":"2026-01-01T10:15:10Z","service":"checkout-api","status":200,"latency_ms":135}
+{"timestamp":"2026-01-01T10:15:13Z","service":"billing-api","status":200,"latency_ms":30}
+{"timestamp":"2026-01-01T10:15:19Z","service":"billing-api","status":200,"latency_ms":36}
+{"timestamp":"2026-01-01T10:15:22Z","service":"billing-api","status":200,"latency_ms":42}
