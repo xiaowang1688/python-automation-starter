@@ -22,6 +22,17 @@ A practical, dependency-free Python project demonstrating **API monitoring, reli
 - Use optional bearer tokens **only for explicitly opted-in HTTPS endpoints** via `AUTOMATION_API_TOKEN`, never from committed configuration.
 - Automated tests with Python's built-in `unittest`; no third-party runtime dependencies.
 
+## Hiring managers: start here
+
+**Python Automation / QA Automation Engineer** · API regression testing · Playwright Chromium E2E · Data reconciliation · CI/CD · Log observability
+
+- [English technical résumé](RESUME.md) — specific implemented work, not unverified employment claims
+- [QA engineering evidence & test plan](docs/QA_ENGINEERING_EVIDENCE.md) — test matrix, reproducible browser checks and a sample bug report
+- [Full international remote portfolio](PORTFOLIO.md) — English-first project summaries and technical details
+- [Browse verified CI runs](https://github.com/xiaowang1688/python-automation-starter/actions) — offline Python tests, browser E2E tests, screenshots and synthetic example reports
+
+**Remote work:** based in Mainland China (UTC+8); Chinese-first with translation-assisted English written collaboration. Seeking international remote Python QA, SDET and automation scripting opportunities.
+
 ## Additional hands-on automation projects
 
 The repository now includes four more practical Python projects, each with **real implementation code, offline unit tests, synthetic/public test fixtures, and an English case study**.
