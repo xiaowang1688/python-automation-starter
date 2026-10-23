@@ -9,7 +9,7 @@ A practical, dependency-free Python project demonstrating **API monitoring, reli
 - Monitor multiple HTTP endpoints configured in JSON.
 - Validate expected HTTP status codes with timeouts and bounded retries.
 - Export machine-readable JSON results for scheduled jobs and CI.
-- Use an optional bearer token from the `AUTOMATION_API_TOKEN` environment variable, never from committed configuration.
+- Use optional bearer tokens **only for explicitly opted-in HTTPS endpoints** via `AUTOMATION_API_TOKEN`, never from committed configuration.
 - Automated tests with Python's built-in `unittest`; no third-party runtime dependencies.
 
 ## Quick start
@@ -23,7 +23,7 @@ python -m automation.healthcheck --config examples/endpoints.json --output repor
 python -m unittest discover -s tests -v
 ```
 
-On Windows PowerShell, set an optional token only if your endpoint requires it:
+For an authenticated HTTPS endpoint, add `"auth": "bearer"` to its endpoint configuration. The default is `"auth": "none"`, which never forwards your token. Redirects are disabled for authenticated requests to prevent credential forwarding. On Windows PowerShell, set the required token:
 
 ```powershell
 $env:AUTOMATION_API_TOKEN = "your-token"
@@ -58,7 +58,7 @@ The CLI returns exit code 0 when every endpoint passes, 1 when any check fails, 
 
 ## Security notes
 
-Never commit API keys, passwords, access tokens, `.env` files, or generated reports. Set credentials in environment variables or GitHub Actions secrets. Prefer HTTPS endpoints for bearer-token authentication. This project deliberately does not log credentials.
+Never commit API keys, passwords, access tokens, `.env` files, or generated reports. Set credentials in environment variables or GitHub Actions secrets. Bearer-token requests require HTTPS and an explicit `"auth": "bearer"` setting. Authenticated requests do not follow redirects. This project deliberately does not log credentials.
 
 ## Roadmap
 
