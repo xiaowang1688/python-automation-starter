@@ -21,5 +21,27 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Compile source
         run: python -m compileall -q automation tests
-      - name: Run offline unit tests
+      - name: Run all offline unit tests
         run: python -m unittest discover -s tests -v
+      - name: Produce synthetic business reports (expected alerts and discrepancies)
+        shell: bash
+        run: |
+          set +e
+          python -m automation.reconcile --output reconciliation-report.json > /dev/null
+          reconciliation_code=$?
+          python -m automation.log_triage --output log-triage-report.json > /dev/null
+          triage_code=$?
+          set -e
+          # The demo deliberately includes three discrepancies and a 5xx spike.
+          test "$reconciliation_code" -eq 1
+          test "$triage_code" -eq 1
+          test -s reconciliation-report.json
+          test -s log-triage-report.json
+      - name: Upload synthetic sample reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-demo-reports-py${{ matrix.python-version }}
+          path: |
+            reconciliation-report.json
+            log-triage-report.json
+          retention-days: 14
