@@ -55,8 +55,9 @@ A Streamlit/Pandas GDP dashboard example for loading CSV data, filtering dates/c
 | [API Regression Runner](projects/api-regression/README.md) | Automate release/API smoke checks | Python HTTP runner, JSON assertions, JUnit XML, offline tests |
 | [Order / Settlement Reconciliation](projects/finance-reconciliation/README.md) | Audit order-to-payment mismatches | CSV input validation, Decimal comparison, JSON discrepancy report |
 | [HTTP Log Anomaly Triage](projects/log-observability/README.md) | Diagnose 5xx bursts and latency spikes | p95 latency by minute, error-rate thresholds, test fixtures |
+| [Playwright Chromium Browser E2E](projects/browser-e2e/README.md) | Regression-test form validation and order confirmation | Real Chromium UI interactions, offline HTML fixture, browser CI, screenshot artifacts |
 
-These examples use controlled synthetic fixtures or optional public demo endpoints. They show source code and tests; they are **not claims of paid client delivery**.
+These examples use controlled synthetic browser/business fixtures or optional public demo endpoints. They show source code and tests; they are **not claims of paid client delivery**.
 
 ## International collaboration / 国际远程协作
 

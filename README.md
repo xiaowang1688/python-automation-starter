@@ -1,4 +1,4 @@
-# Python Automation | API Health Checks & CI
+# Python Automation Engineering | API, QA & Operations Projects
 
 [![Python CI](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.12%20%7C%203.13-blue)](https://github.com/xiaowang1688/python-automation-starter/blob/main/.github/workflows/ci.yml)
@@ -23,15 +23,16 @@ A practical, dependency-free Python project demonstrating **API monitoring, reli
 
 ## Additional hands-on automation projects
 
-The repository now includes three more practical Python projects, each with **real implementation code, offline unit tests, synthetic/public test fixtures, and an English case study**.
+The repository now includes four more practical Python projects, each with **real implementation code, offline unit tests, synthetic/public test fixtures, and an English case study**.
 
 | Scenario | Engineering deliverable | Code & explanation |
 | --- | --- | --- |
 | API regression testing | Declarative GET/POST checks, status/JSON assertions, JSON and JUnit reports | [API Regression Runner](projects/api-regression/README.md) |
 | Order/settlement reconciliation | Decimal-safe CSV comparisons and exception reports | [Data Reconciliation](projects/finance-reconciliation/README.md) |
 | Service log observability | UTC-minute 5xx error rate, p95 latency and threshold alerts | [Log Anomaly Triage](projects/log-observability/README.md) |
+| Browser UI automation | Real Playwright Chromium tests of a local order portal | [Playwright E2E](projects/browser-e2e/README.md) |
 
-**Evidence:** Run the [Python CI workflow](.github/workflows/ci.yml) to execute all suites on Python 3.10, 3.12 and 3.13. The sample data is synthetic; external APIs appear only in optional demos, never in the offline CI tests.
+**Evidence:** Run the [Python CI workflow](.github/workflows/ci.yml) for offline tests on Python 3.10, 3.12 and 3.13. The [separate Playwright workflow](.github/workflows/browser-e2e.yml) runs real Chromium end-to-end browser tests. The sample data is synthetic; external APIs appear only in optional demos, never in the offline CI tests.
 
 ## Quick start
 

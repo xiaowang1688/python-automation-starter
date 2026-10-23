@@ -14,6 +14,7 @@ I build practical Python automation tools with reproducible tests and readable t
 | [API Regression Automation](https://github.com/xiaowang1688/python-automation-starter/tree/main/projects/api-regression) | GET/POST checks, JSON contract assertions, JUnit reports |
 | [Order / Settlement Reconciliation](https://github.com/xiaowang1688/python-automation-starter/tree/main/projects/finance-reconciliation) | Strict CSV ingestion, Decimal arithmetic, discrepancy classification |
 | [HTTP Log Anomaly Detection](https://github.com/xiaowang1688/python-automation-starter/tree/main/projects/log-observability) | Per-minute 5xx ratios and p95 latency alerts |
+| [Playwright Browser QA](https://github.com/xiaowang1688/python-automation-starter/tree/main/projects/browser-e2e) | Real headless Chromium UI validation, CI and screenshot evidence |
 | [Security Automation](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner) | Python subprocess wrappers for Mythril, offline regression tests |
 
 All featured Python automation work can be reviewed through code, unit tests, and [GitHub Actions CI](https://github.com/xiaowang1688/python-automation-starter/actions). These are **demonstrable hands-on projects**, not claims of an unverified employment duration or commercial client engagement.

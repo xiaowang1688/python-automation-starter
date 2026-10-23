@@ -24,6 +24,7 @@
 - API regression: [code](../automation/api_regression.py) / [tests](../tests/test_api_regression.py)
 - CSV reconciliation: [code](../automation/reconcile.py) / [tests](../tests/test_reconcile.py)
 - HTTP log diagnostics: [code](../automation/log_triage.py) / [tests](../tests/test_log_triage.py)
+- Real browser E2E: [Playwright tests](../browser_tests/test_order_portal.py) / [browser workflow](../.github/workflows/browser-e2e.yml)
 
 ## Responsible disclosure and contact
 Please use a repository Issue for non-sensitive collaboration inquiries. **Do not paste private contracts, access credentials, financial data, or personal contact details into public issues.** Agree on an appropriate private channel before exchanging such information.
