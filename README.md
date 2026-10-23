@@ -3,7 +3,7 @@
 [![Python CI](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.12%20%7C%203.13-blue)](https://github.com/xiaowang1688/python-automation-starter/blob/main/.github/workflows/ci.yml)
 
-**Maintained by [Xiaowang](https://github.com/xiaowang1688) · Python Automation / QA Automation portfolio**
+**Maintained by [Xiaowang](https://github.com/xiaowang1688) · Python Automation / QA Automation · Open to international remote opportunities**
 
 **For hiring reviewers:** [About me and selected projects](PORTFOLIO.md) · [Engineering case study](docs/ENGINEERING_CASE_STUDY.md) · [Actual source](automation/healthcheck.py) · [Offline tests](tests/test_healthcheck.py) · [CI evidence](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 
@@ -20,6 +20,18 @@ A practical, dependency-free Python project demonstrating **API monitoring, reli
 - Export machine-readable JSON results for scheduled jobs and CI.
 - Use optional bearer tokens **only for explicitly opted-in HTTPS endpoints** via `AUTOMATION_API_TOKEN`, never from committed configuration.
 - Automated tests with Python's built-in `unittest`; no third-party runtime dependencies.
+
+## Additional hands-on automation projects
+
+The repository now includes three more practical Python projects, each with **real implementation code, offline unit tests, synthetic/public test fixtures, and an English case study**.
+
+| Scenario | Engineering deliverable | Code & explanation |
+| --- | --- | --- |
+| API regression testing | Declarative GET/POST checks, status/JSON assertions, JSON and JUnit reports | [API Regression Runner](projects/api-regression/README.md) |
+| Order/settlement reconciliation | Decimal-safe CSV comparisons and exception reports | [Data Reconciliation](projects/finance-reconciliation/README.md) |
+| Service log observability | UTC-minute 5xx error rate, p95 latency and threshold alerts | [Log Anomaly Triage](projects/log-observability/README.md) |
+
+**Evidence:** Run the [Python CI workflow](.github/workflows/ci.yml) to execute all suites on Python 3.10, 3.12 and 3.13. The sample data is synthetic; external APIs appear only in optional demos, never in the offline CI tests.
 
 ## Quick start
 

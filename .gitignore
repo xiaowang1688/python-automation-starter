@@ -10,4 +10,8 @@ venv/
 htmlcov/
 report.json
 reports/
+api-results.json
+api-junit.xml
+reconciliation-report.json
+log-triage-report.json
 .DS_Store

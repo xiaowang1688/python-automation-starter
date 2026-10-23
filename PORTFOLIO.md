@@ -2,7 +2,7 @@
 
 **Python Automation · API Testing · CI/CD · Reliability Checks · Security Automation**
 
-Based in Mainland China · Open to remote Python automation, QA automation, and scripting projects
+Based in Mainland China (UTC+8) · Interested in international remote Python automation, QA automation, and scripting projects
 
 [![Python Automation CI](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/python-automation-starter/actions/workflows/ci.yml)
 [![Security Scanner CI](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner/actions/workflows/ci.yml)
@@ -15,7 +15,7 @@ I focus on **practical Python automation**: repeatable API checks, testable scri
 
 I am looking for remote opportunities involving **Python automation, QA / test development, API validation, CI pipeline maintenance, and script-driven workflows**.
 
-我希望承接或应聘 Python 自动化、接口测试、测试开发和脚本工具相关的远程工作。日常沟通以中文为主，能够通过文档和异步书面方式协作；不宣称英语口语流利。
+我希望承接或应聘 Python 自动化、接口测试、测试开发和脚本工具相关的远程工作。日常沟通以中文为主，可借助翻译工具进行英文书面协作；偏好需求清晰、文档齐全的异步远程工作。
 
 ## Selected projects / 重点作品
 
@@ -48,6 +48,24 @@ I am looking for remote opportunities involving **Python automation, QA / test d
 
 A Streamlit/Pandas GDP dashboard example for loading CSV data, filtering dates/countries, and charting results. This is a **dashboard template/example**, not evidence of an original production platform.
 
+## More verifiable practice projects / 新增实践案例
+
+| Portfolio project | Engineering scenario | Evidence |
+| --- | --- | --- |
+| [API Regression Runner](projects/api-regression/README.md) | Automate release/API smoke checks | Python HTTP runner, JSON assertions, JUnit XML, offline tests |
+| [Order / Settlement Reconciliation](projects/finance-reconciliation/README.md) | Audit order-to-payment mismatches | CSV input validation, Decimal comparison, JSON discrepancy report |
+| [HTTP Log Anomaly Triage](projects/log-observability/README.md) | Diagnose 5xx bursts and latency spikes | p95 latency by minute, error-rate thresholds, test fixtures |
+
+These examples use controlled synthetic fixtures or optional public demo endpoints. They show source code and tests; they are **not claims of paid client delivery**.
+
+## International collaboration / 国际远程协作
+
+I am interested in international teams that value testable Python scripts, reproducible issues, written requirements, pull request reviews, and asynchronous delivery. I am based in Mainland China (UTC+8). I use Chinese for primary communication and can work with English written technical material **with translation assistance**. I do not claim fluent spoken English.
+
+工作方式：异步文字沟通、GitHub Issues/PR、可复现的问题描述、自动化测试结果、英文优先文档。没有公开验证的雇主、工作年限、生产客户或商业交付记录，不会在此虚构。
+
+[Remote collaboration notes](docs/INTERNATIONAL_REMOTE.md) · [GitHub profile README draft](PROFILE_README_DRAFT.md)
+
 ## What you can verify / 可核验的技能
 
 | Area | Evidence |
@@ -65,7 +83,7 @@ A Streamlit/Pandas GDP dashboard example for loading CSV data, filtering dates/c
 
 - **Role interests:** Python Automation Engineer · QA Automation / Test Development · API Testing · Scripting
 - **Location:** Mainland China · Remote-first opportunities
-- **Communication:** Chinese-first; written, asynchronous technical communication
+- **Communication:** Chinese-first; translation-assisted English writing and asynchronous documentation
 - **Contact:** Open a GitHub discussion or issue in a relevant public repository, or use GitHub's profile contact options once configured
 
 > These repositories demonstrate **hands-on project implementations and CI evidence**, not an unverified number of years in a production role, employer names, or client outcomes.
